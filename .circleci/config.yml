@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ubuntu:18.04
+    steps:
+      - checkout
+      - run: cat /sys/fs/cgroup/memory/memory.stat
+      - run: cat /sys/fs/cgroup/cpuset/cpuset.cpus
+      - run: cat /sys/fs/cgroup/cpu/cpu.shares
+      - run: cat /sys/fs/cgroup/cpu/cpu.cfs_quota_us
