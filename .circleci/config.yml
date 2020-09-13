@@ -9,3 +9,6 @@ jobs:
       - run: cat /sys/fs/cgroup/cpuset/cpuset.cpus
       - run: cat /sys/fs/cgroup/cpu/cpu.shares
       - run: cat /sys/fs/cgroup/cpu/cpu.cfs_quota_us
+      - run: cat /sys/fs/cgroup/cpu/cpuacct.usage_all
+      - run: cat /sys/fs/cgroup/cpu/cpu.cfs_quota_us
+      - run: cat /proc/1/cgroup
